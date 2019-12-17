@@ -1,0 +1,110 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "bce195ac-deb9-4848-95c9-befa4ebc25f2": {
+        "id": "bce195ac-deb9-4848-95c9-befa4ebc25f2",
+        "parent": null,
+        "name": "testcld",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "5b7acc54-0b55-4267-ae6a-70acf0df53b5"
+        ],
+        "isRemovable": false,
+        "filePath": "testcld"
+      },
+      "5b7acc54-0b55-4267-ae6a-70acf0df53b5": {
+        "id": "5b7acc54-0b55-4267-ae6a-70acf0df53b5",
+        "parent": "bce195ac-deb9-4848-95c9-befa4ebc25f2",
+        "name": "function.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "testcld/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed test shedulr\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0,
+          "handler": "handler"
+        },
+        "triggers": [
+          {
+            "resourceName": "scheduler-trigger",
+            "config": {
+              "type": "",
+              "schedulePattern": "0 18 * * *",
+              "jobId": "testshedulr",
+              "timezone": "UTC"
+            }
+          }
+        ]
+      },
+      "b4918878-62f9-4198-a8fe-12dc8f241818": {
+        "id": "b4918878-62f9-4198-a8fe-12dc8f241818",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.testcldfunction = require(\"./testcld/function.js\").handler;"
+      },
+      "31b4a454-7430-4da7-a6a7-caf641129daa": {
+        "id": "31b4a454-7430-4da7-a6a7-caf641129daa",
+        "parent": null,
+        "name": "main.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "main.py",
+        "code": "# This file is used to register all your cloud functions in GCP.\n# DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\n"
+      }
+    },
+    "rootNode": "bce195ac-deb9-4848-95c9-befa4ebc25f2",
+    "openFiles": [
+      "5b7acc54-0b55-4267-ae6a-70acf0df53b5"
+    ],
+    "currentFileId": "5b7acc54-0b55-4267-ae6a-70acf0df53b5",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {}
+      },
+      "scheduler-trigger": {
+        "name": "scheduler-trigger",
+        "type": "scheduler-trigger",
+        "config": {}
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "testcld",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east1",
+    "platform": "GCP",
+    "platformRegions": {},
+    "lastSave": 1576585350228
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "testcld",
+      "url": "https://github.com/Indunil1992/testcld"
+    }
+  }
+}
